@@ -28,6 +28,9 @@ public class Fournisseur {
         }
     }
 
+    /**
+     * Removes the specified Equipement and sets its Fournisseur to null if it exists.
+     */
     public void supprimerEquipement(Equipement e) {
         if (e != null && equipements.remove(e)) {
             e.setFournisseur(null);
@@ -35,10 +38,16 @@ public class Fournisseur {
     }
 
 
+    /**
+     * Returns the value of numRC.
+     */
     public int getNumRC() {
         return numRC;
     }
 
+    /**
+     * Sets the value of numRC.
+     */
     public void setNumRC(int numRC) {
         this.numRC = numRC;
     }
@@ -51,6 +60,9 @@ public class Fournisseur {
         this.raisonSocial = raisonSocial;
     }
 
+    /**
+     * Returns the adresse.
+     */
     public String getAdresse() {
         return adresse;
     }
@@ -59,14 +71,23 @@ public class Fournisseur {
         this.adresse = adresse;
     }
 
+    /**
+     * Returns the current capital amount.
+     */
     public double getCapital() {
         return capital;
     }
 
+    /**
+     * Sets the value of capital.
+     */
     public void setCapital(double capital) {
         this.capital = capital;
     }
 
+    /**
+     * Returns the list of equipements.
+     */
     public List<Equipement> getEquipements() {
         return equipements;
     }
