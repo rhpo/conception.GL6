@@ -24,6 +24,9 @@ public class Atelier {
         }
     }
 
+    /**
+     * Removes the specified Equipement from the collection and unsets its affecte property.
+     */
     public void supprimerEquipement(Equipement e) {
         if (equipements.remove(e)) {
             e.setAffecte(null);
@@ -31,12 +34,24 @@ public class Atelier {
     }
 
  
+    /**
+     * Returns the value of numAtelier.
+     */
     public int getNumAtelier() { return numAtelier; }
+    /**
+     * Returns the entree date.
+     */
     public Date getEntree() { return entree; }
     public Date getSortie() { return sortie; }
+    /**
+     * Returns the list of equipements.
+     */
     public List<Equipement> getEquipements() { return equipements; }
 
     
+    /**
+     * Returns a string representation of the Atelier object.
+     */
     public String toString() {
         return "Atelier{" +
                 "numAtelier=" + numAtelier +

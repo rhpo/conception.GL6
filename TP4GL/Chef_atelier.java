@@ -30,27 +30,41 @@ public class Chef_atelier extends personne{
 	}
 
 
+	/**
+	 * Returns the number of experience.
+	 */
 	public int getNbExperience() {
 		return NbExperience;
 	}
 	public void setNbExperience(int nbExperience) {
 		NbExperience = nbExperience;
 	}
+	/** Returns the DateExperience. */
 	public Date getDateExperience() {
 		return DateExperience;
 	}
+	/**
+	 * Sets the date of experience.
+	 */
 	public void setDateExperience(Date dateExperience) {
 		DateExperience = dateExperience;
 	}
+	/** Returns the date of the promotion. */
 	public Date getDatePromotion() {
 		return DatePromotion;
 	}
+	/**
+	 * Sets the date for the promotion.
+	 */
 	public void setDatePromotion(Date datePromotion) {
 		DatePromotion = datePromotion;
 	}
 	public Status getStatus() {
 		return status;
 	}
+	/**
+	 * Sets the status.
+	 */
 	public void setStatus(Status status) {
 		this.status = status;
 	}
@@ -61,10 +75,16 @@ public class Chef_atelier extends personne{
 		return "Chef d’Atelier {" +  super.toString() + ", NbExpérience: " + NbExperience + ", DateExpérience: " + DateExperience +  ", DatePromotion: " + DatePromotion +  ", Statut: " + status +"}";
 	}
 	
+	/**
+	 * Displays the string representation of the object.
+	 */
 	public void afficher() {
 		System.out.println(this.toString());
 	}
 	
+	/**
+	 * Returns the singleton instance of Chef_atelier.
+	 */
 	public static Chef_atelier getInstance(String nom, String prenom) {
 		if (instance == null) {
 		instance = new Chef_atelier(nom, prenom);
@@ -72,6 +92,9 @@ public class Chef_atelier extends personne{
 		return instance;
 		}
 	
+	/**
+	 * Calculates the number of years of experience based on the given expiration date.
+	 */
 	public int miseajourexp (Date dateexp) {
 		Date curr = new Date();
 		long diff = curr.getTime() - dateexp.getTime();	
